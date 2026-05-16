@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H & A Enterprises | Bhadrak's Premium Electronics Destination</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#0f4c81', // Deep Blue matching reference
+                        secondary: '#eef2f6', // Light grayish blue for cards
+                        accent: '#2563eb', // Bright blue for active buttons
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for brand strip if needed on mobile */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-slide {
+            animation: slide 30s linear infinite;
+        }
+
+        .animate-slide:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 antialiased overflow-x-hidden">
+
+    <nav class="bg-white sticky top-0 z-50 shadow-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex flex-col justify-center">
+                    <h1 class="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-tight leading-none">H & A
+                        ENTERPRISES</h1>
+                    <p class="text-[10px] md:text-xs text-gray-500 font-medium tracking-widest mt-1">BHADRAK'S TRUSTED
+                        ELECTRONICS DESTINATION</p>
+                </div>
+
+                <div class="hidden lg:flex space-x-6 items-center">
+                    <a href="#" class="bg-accent text-white px-4 py-1.5 rounded-full text-sm font-medium">Home</a>
+                    <div class="relative group">
+                        <a href="#categories" class="text-gray-700 hover:text-accent font-medium text-sm flex items-center py-2">
+                            Products <i class="fas fa-chevron-down ml-1 text-[10px]"></i>
+                        </a>
+                        <div
+                            class="absolute left-0 mt-0 w-48 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <a href="#categories"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-accent border-b border-gray-50">Smart
+                                TVs</a>
+                            <a href="#categories"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-accent border-b border-gray-50">Refrigerators</a>
+                            <a href="#categories"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-accent border-b border-gray-50">Air
+                                Conditioners</a>
+                            <a href="#categories"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-accent">Washing
+                                Machines</a>
+                        </div>
+                    </div>
+                    <a href="#brands" class="text-gray-700 hover:text-accent font-medium text-sm">Brands</a>
+                    <a href="#" class="open-banner-btn text-gray-700 hover:text-accent font-medium text-sm">Offers</a>
+                    <a href="#owner" class="text-gray-700 hover:text-accent font-medium text-sm">About Us</a>
+                    <a href="#contact" class="text-gray-700 hover:text-accent font-medium text-sm">Contact</a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-4">
+                    <div class="flex items-center text-sm">
+                        <i class="fas fa-phone-alt text-accent text-lg mr-2"></i>
+                        <div>
+                            <p class="text-gray-500 text-[10px] leading-tight">Call Us Now</p>
+                            <p class="font-bold text-gray-900 leading-tight">+91 7008046492</p>
+                        </div>
+                    </div>
+                    <a href="#"
+                        class="open-form-modal-btn bg-accent text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-blue-700 transition flex items-center">
+                        <i class="fas fa-headset mr-2"></i> Connect Us
+                    </a>
+                </div>
+
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 text-2xl focus:outline-none"><i
+                            class="fas fa-bars"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu"
+            class="hidden lg:hidden bg-white border-t border-gray-100 absolute left-0 top-full w-full shadow-lg z-50">
+            <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
+                <a href="#"
+                    class="block px-3 py-2 text-base font-medium text-accent hover:bg-blue-50 rounded-md">Home</a>
+                <a href="#categories"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-accent hover:bg-blue-50 rounded-md">Products</a>
+                <a href="#brands"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-accent hover:bg-blue-50 rounded-md">Brands</a>
+                <a href="#"
+                    class="open-banner-btn block px-3 py-2 text-base font-medium text-gray-700 hover:text-accent hover:bg-blue-50 rounded-md">Offers</a>
+                <a href="#owner"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-accent hover:bg-blue-50 rounded-md">About
+                    Us</a>
+                <a href="#contact"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-accent hover:bg-blue-50 rounded-md">Contact</a>
+                <a href="#"
+                    class="open-form-modal-btn block mt-4 px-3 py-2 text-base font-bold text-center text-white bg-accent rounded-md shadow">Connect
+                    Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative bg-white pt-10 pb-16 lg:pt-16 lg:pb-24 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+                <div class="z-10">
+                    <h2 class="text-5xl lg:text-7xl font-extrabold text-gray-900 leading-[1.1] mb-6">
+                        Bhadrak's <br>
+                        <span class="text-accent">Premium <br>Electronics</span> <br>
+                        Destination
+                    </h2>
+                    <p class="text-gray-600 text-lg mb-8 max-w-lg">
+                        Authorized dealer for trusted brands including <span class="font-semibold text-accent">Croma &
+                            Tata</span>. Bringing premium technology and home appliances to Bhadrak.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4 mb-12">
+                        <a href="#"
+                            class="open-form-modal-btn bg-accent text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition flex items-center shadow-lg shadow-blue-200">
+                            Shop now! <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#"
+                            class="open-form-modal-btn bg-white text-accent border border-blue-200 px-6 py-3 rounded-full font-semibold hover:bg-blue-50 transition flex items-center">
+                            Visit Store <i class="fas fa-map-marker-alt ml-2"></i>
+                        </a>
+                    </div>
+
+                    <div class="flex justify-between max-w-md text-center text-sm font-medium text-gray-700">
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-accent mb-2">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <span class="text-xs">100% Genuine<br>Products</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-accent mb-2">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <span class="text-xs">Authorized<br>Dealer</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-accent mb-2">
+                                <i class="fas fa-tag"></i>
+                            </div>
+                            <span class="text-xs">Best Price<br>Guarantee</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-accent mb-2">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <span class="text-xs">After Sales<br>Support</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative w-full h-[400px] lg:h-[600px] flex justify-center items-center">
+                    <img src="https://placehold.co/800x600/e2e8f0/475569?text=Electronics+Composition"
+                        alt="Electronics Display" class="object-contain w-full h-full z-10 relative drop-shadow-2xl">
+
+                    <div
+                        class="absolute top-0 right-0 bg-white p-3 rounded-xl shadow-xl z-20 border border-gray-100 hidden md:block">
+                        <p class="font-bold text-gray-800 text-sm">croma</p>
+                        <p class="text-[10px] text-gray-500">A TATA Enterprise</p>
+                        <div
+                            class="bg-accent text-white text-[10px] px-2 py-0.5 rounded mt-1 text-center font-semibold">
+                            Authorized Dealer</div>
+                    </div>
+
+                    <div
+                        class="absolute bottom-10 right-10 bg-white py-2 px-4 rounded-full shadow-lg z-20 border border-gray-100 flex items-center space-x-3 hidden md:flex">
+                        <div>
+                            <p class="font-bold text-accent leading-tight">5000+</p>
+                            <p class="text-xs text-gray-500">Happy Customers</p>
+                        </div>
+                        <div class="flex -space-x-2">
+                            <img class="w-8 h-8 rounded-full border-2 border-white"
+                                src="https://placehold.co/100x100?text=1" alt="">
+                            <img class="w-8 h-8 rounded-full border-2 border-white"
+                                src="https://placehold.co/100x100?text=2" alt="">
+                            <div
+                                class="w-8 h-8 rounded-full border-2 border-white bg-accent flex items-center justify-center text-white text-xs font-bold">
+                                +</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="brands" class="border-y border-gray-200 bg-white py-8 overflow-hidden relative">
+        <div
+            class="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none">
+        </div>
+        <div
+            class="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none">
+        </div>
+
+        <div class="flex items-center w-max animate-slide hover:[animation-play-state:paused] gap-16 md:gap-24 pr-16 md:pr-24">
+            <!-- Set 1 -->
+            <img src="./logos/croma.svg" alt="croma"
+                class="h-16 md:h-20 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="./logos/tata_test.svg" alt="TATA"
+                class="h-16 md:h-20 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="./logos/samsung.svg" alt="SAMSUNG"
+                class="h-14 md:h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="./logos/lg.svg" alt="LG"
+                class="h-16 md:h-20 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+
+            <!-- Set 2 for seamless loop -->
+            <img src="./logos/croma.svg" alt="croma"
+                class="h-16 md:h-20 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="./logos/tata_test.svg" alt="TATA"
+                class="h-16 md:h-20 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="./logos/samsung.svg" alt="SAMSUNG"
+                class="h-14 md:h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+            <img src="./logos/lg.svg" alt="LG"
+                class="h-16 md:h-20 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-lg font-semibold text-gray-600 mb-1">Why Choose</h3>
+            <h2 class="text-3xl font-bold text-primary mb-10 border-b-2 border-accent inline-block pb-1">H & A
+                ENTERPRISES?</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div
+                    class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 relative group hover:shadow-md transition">
+                    <div
+                        class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-accent text-xl mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-2">Authorized Dealer</h4>
+                    <p class="text-gray-600 text-sm">We are an authorized dealer for Croma, Tata & leading global
+                        brands.</p>
+                    <div
+                        class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition cursor-pointer">
+                        <i class="fas fa-arrow-right text-sm"></i>
+                    </div>
+                </div>
+                <div
+                    class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 relative group hover:shadow-md transition">
+                    <div
+                        class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-accent text-xl mb-4">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-2">Genuine Products</h4>
+                    <p class="text-gray-600 text-sm">100% genuine and original products with official warranty.</p>
+                    <div
+                        class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition cursor-pointer">
+                        <i class="fas fa-arrow-right text-sm"></i>
+                    </div>
+                </div>
+                <div
+                    class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 relative group hover:shadow-md transition">
+                    <div
+                        class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-accent text-xl mb-4">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-2">Best Pricing</h4>
+                    <p class="text-gray-600 text-sm">Get the best market price with exciting offers and seasonal
+                        discounts.</p>
+                    <div
+                        class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition cursor-pointer">
+                        <i class="fas fa-arrow-right text-sm"></i>
+                    </div>
+                </div>
+                <div
+                    class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 relative group hover:shadow-md transition">
+                    <div
+                        class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-accent text-xl mb-4">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-2">Trusted Local Support</h4>
+                    <p class="text-gray-600 text-sm">Fast & reliable after-sales support from your trusted local store.
+                    </p>
+                    <div
+                        class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition cursor-pointer">
+                        <i class="fas fa-arrow-right text-sm"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="categories" class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-end mb-8">
+                <h2 class="text-2xl font-bold text-gray-900">Shop By Categories</h2>
+                <a href="#" id="view-all-categories-btn"
+                    class="text-accent text-sm font-medium border border-blue-200 px-4 py-1.5 rounded-full hover:bg-blue-50 transition hidden sm:block">View
+                    All Categories <i class="fas fa-arrow-right ml-1"></i></a>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <div
+                    class="bg-secondary rounded-2xl p-4 flex flex-col items-center justify-between h-48 cursor-pointer group">
+                    <img src="./television.webp" alt="Smart TVs"
+                        class="h-28 object-contain group-hover:scale-110 transition">
+                    <div class="w-full flex justify-between items-center mt-2">
+                        <span class="font-semibold text-gray-800 text-sm">Smart TVs</span>
+                        <div
+                            class="w-6 h-6 rounded-full bg-white flex items-center justify-center text-accent shadow-sm">
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="bg-secondary rounded-2xl p-4 flex flex-col items-center justify-between h-48 cursor-pointer group">
+                    <img src="./refrigerator.webp" alt="Refrigerators"
+                        class="h-28 object-contain group-hover:scale-110 transition">
+                    <div class="w-full flex justify-between items-center mt-2">
+                        <span class="font-semibold text-gray-800 text-sm">Refrigerators</span>
+                        <div
+                            class="w-6 h-6 rounded-full bg-white flex items-center justify-center text-accent shadow-sm">
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="bg-secondary rounded-2xl p-4 flex flex-col items-center justify-between h-48 cursor-pointer group">
+                    <img src="./washingmachinelogo.webp" alt="Washing Machines"
+                        class="h-28 object-contain group-hover:scale-110 transition">
+                    <div class="w-full flex justify-between items-center mt-2">
+                        <span class="font-semibold text-gray-800 text-sm">Washing Machines</span>
+                        <div
+                            class="w-6 h-6 rounded-full bg-white flex items-center justify-center text-accent shadow-sm">
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="bg-secondary rounded-2xl p-4 flex flex-col items-center justify-between h-48 cursor-pointer group">
+                    <img src="./aclogo.webp" alt="Air Conditioners"
+                        class="h-28 object-contain group-hover:scale-110 transition">
+                    <div class="w-full flex justify-between items-center mt-2">
+                        <span class="font-semibold text-gray-800 text-sm">Air Conditioners</span>
+                        <div
+                            class="w-6 h-6 rounded-full bg-white flex items-center justify-center text-accent shadow-sm">
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="bg-secondary rounded-2xl p-4 flex flex-col items-center justify-between h-48 cursor-pointer group">
+                    <img src="./mixer.webp" alt="Kitchen Appliances"
+                        class="h-28 object-contain group-hover:scale-110 transition">
+                    <div class="w-full flex justify-between items-center mt-2">
+                        <span class="font-semibold text-gray-800 text-sm">Kitchen Appliances</span>
+                        <div
+                            class="w-6 h-6 rounded-full bg-white flex items-center justify-center text-accent shadow-sm">
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="bg-secondary rounded-2xl p-4 flex flex-col items-center justify-between h-48 cursor-pointer group">
+                    <img src="./keyboard.webp" alt="Gadgets & Accessories"
+                        class="h-28 object-contain group-hover:scale-110 transition">
+                    <div class="w-full flex justify-between items-center mt-2">
+                        <span class="font-semibold text-gray-800 text-[13px]">Gadgets & Accessories</span>
+                        <div
+                            class="w-6 h-6 rounded-full bg-white flex items-center justify-center text-accent shadow-sm">
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Extra categories: hidden by default, revealed on "View All" click -->
+                <div id="extra-categories" class="contents">
+                    <div
+                        class="bg-secondary rounded-2xl p-4 flex flex-col items-center justify-between h-48 cursor-pointer group hidden">
+                        <img src="" alt="Cooler"
+                            class="h-28 object-contain group-hover:scale-110 transition">
+                        <div class="w-full flex justify-between items-center mt-2">
+                            <span class="font-semibold text-gray-800 text-sm">Cooler</span>
+                            <div
+                                class="w-6 h-6 rounded-full bg-white flex items-center justify-center text-accent shadow-sm">
+                                <i class="fas fa-arrow-right text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-secondary rounded-2xl p-4 flex flex-col items-center justify-between h-48 cursor-pointer group hidden">
+                        <img src="" alt="Water Purifier"
+                            class="h-28 object-contain group-hover:scale-110 transition">
+                        <div class="w-full flex justify-between items-center mt-2">
+                            <span class="font-semibold text-gray-800 text-sm">Water Purifier</span>
+                            <div
+                                class="w-6 h-6 rounded-full bg-white flex items-center justify-center text-accent shadow-sm">
+                                <i class="fas fa-arrow-right text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-secondary rounded-2xl p-4 flex flex-col items-center justify-between h-48 cursor-pointer group hidden">
+                        <img src="" alt="Stabilizer"
+                            class="h-28 object-contain group-hover:scale-110 transition">
+                        <div class="w-full flex justify-between items-center mt-2">
+                            <span class="font-semibold text-gray-800 text-sm">Stabilizer</span>
+                            <div
+                                class="w-6 h-6 rounded-full bg-white flex items-center justify-center text-accent shadow-sm">
+                                <i class="fas fa-arrow-right text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-6 text-center sm:hidden">
+                <a href="#" id="view-all-categories-btn-mobile"
+                    class="text-accent text-sm font-medium border border-blue-200 px-4 py-2 rounded-full inline-block">View
+                    All Categories <i class="fas fa-arrow-right ml-1"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-gray-50 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">A Glimpse Inside Our Store</h2>
+                <p class="text-gray-600">Experience premium electronics in Bhadrak like never before.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+                <div class="rounded-xl overflow-hidden shadow-sm aspect-square md:aspect-video group">
+                    <img src="./ac.webp" alt="Gallery"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-sm aspect-square md:aspect-video group">
+                    <img src="./coolers.webp" alt="Gallery"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-sm aspect-square md:aspect-video group">
+                    <img src="./fans.webp" alt="Gallery"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-sm aspect-square md:aspect-video group">
+                    <img src="./fridge.webp" alt="Gallery"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-sm aspect-square md:aspect-video group">
+                    <img src="./gadgets.webp" alt="Gallery"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-sm aspect-square md:aspect-video group">
+                    <img src="./tv.webp" alt="Gallery"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Experience the Best in <br><span
+                            class="text-accent">Electronics</span></h2>
+                    <p class="text-gray-600 mb-8 text-lg leading-relaxed">
+                        At H & A Enterprises, we bring the latest technology and top-quality electronics to make your
+                        life smarter and more comfortable.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                        <div class="bg-gray-50 rounded-2xl p-5 border border-gray-100 flex items-start space-x-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-blue-100 flex-shrink-0 flex items-center justify-center text-accent">
+                                <i class="fas fa-box-open"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">Wide Range</h4>
+                                <p class="text-sm text-gray-600">From home appliances to gadgets.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 rounded-2xl p-5 border border-gray-100 flex items-start space-x-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-blue-100 flex-shrink-0 flex items-center justify-center text-accent">
+                                <i class="fas fa-user-friends"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">Customer First</h4>
+                                <p class="text-sm text-gray-600">Your satisfaction is our priority.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-6 items-center pt-4 border-t border-gray-100">
+                        <div>
+                            <h4 class="font-bold text-accent text-2xl">5000+</h4>
+                            <p class="text-[10px] text-gray-500 font-medium uppercase">Happy Customers</p>
+                        </div>
+                        <div class="w-px h-10 bg-gray-200"></div>
+                        <div>
+                            <h4 class="font-bold text-accent text-2xl">25+</h4>
+                            <p class="text-[10px] text-gray-500 font-medium uppercase">Premium Brands</p>
+                        </div>
+                        <div class="w-px h-10 bg-gray-200"></div>
+                        <div>
+                            <h4 class="font-bold text-accent text-2xl">10+</h4>
+                            <p class="text-[10px] text-gray-500 font-medium uppercase">Years of Trust</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-1 space-y-6">
+                    <div
+                        class="bg-gray-50 rounded-2xl p-6 flex items-start space-x-5 border border-gray-100 hover:shadow-md transition">
+                        <div
+                            class="w-12 h-12 rounded-full bg-blue-100 flex-shrink-0 flex items-center justify-center text-accent text-lg">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2 text-lg">Authorized Reseller</h4>
+                            <p class="text-sm text-gray-600 leading-relaxed">We are official partners with leading
+                                brands, ensuring 100% genuine products and reliable warranty support.</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-gray-50 rounded-2xl p-6 flex items-start space-x-5 border border-gray-100 hover:shadow-md transition">
+                        <div
+                            class="w-12 h-12 rounded-full bg-blue-100 flex-shrink-0 flex items-center justify-center text-accent text-lg">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2 text-lg">Unbeatable Prices</h4>
+                            <p class="text-sm text-gray-600 leading-relaxed">Enjoy the most competitive pricing in
+                                Bhadrak along with easy financing and zero downpayment options.</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-gray-50 rounded-2xl p-6 flex items-start space-x-5 border border-gray-100 hover:shadow-md transition">
+                        <div
+                            class="w-12 h-12 rounded-full bg-blue-100 flex-shrink-0 flex items-center justify-center text-accent text-lg">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2 text-lg">Expert Installation</h4>
+                            <p class="text-sm text-gray-600 leading-relaxed">Get your appliances delivered and
+                                professionally installed by our team of trained technicians.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="owner" class="bg-gray-50 py-16 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-2/5 flex justify-center order-1 md:order-1 relative">
+                <div class="absolute inset-0 bg-blue-100 rounded-full translate-x-4 translate-y-4"></div>
+                <div
+                    class="w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-white overflow-hidden shadow-2xl relative z-10">
+                    <img src="./owner.webp" alt="Rosemary Padhi - Owner" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="md:w-3/5 text-center md:text-left order-2 md:order-2">
+                <div
+                    class="inline-flex items-center space-x-2 bg-blue-50 px-3 py-1 rounded-full text-accent text-xs font-bold uppercase tracking-wider mb-4 border border-blue-100">
+                    <i class="fas fa-star"></i>
+                    <span>Trusted Since Years</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">A Legacy of Trust in Bhadrak</h2>
+                <div class="space-y-4 text-gray-600 text-lg leading-relaxed relative">
+                    <i class="fas fa-quote-left absolute -top-4 -left-4 text-4xl text-gray-200 opacity-50"></i>
+                    <p class="relative z-10">
+                        At H & A Enterprises, your complete satisfaction is our highest priority. For years, we’ve
+                        proudly
+                        served our community as the <strong>top home appliances store Bhadrak</strong> families trust.
+                        Our
+                        exclusive status as a <strong>TATA Croma official partner Bhadrak</strong> means you get
+                        guaranteed
+                        genuine products and world-class quality right in your neighborhood.
+                    </p>
+                    <p>
+                        Whether you want to <strong>buy Smart TV in Bhadrak</strong> for your living room or need the
+                        <strong>best refrigerator shop in Bhadrak</strong> to upgrade your kitchen, we deliver. As the
+                        leading <strong>AC dealer in Bhadrak</strong>, we combine unbeatable deals with dedicated
+                        after-sales support, ensuring your home is always comfortable.
+                    </p>
+                </div>
+                <div class="mt-8 flex items-center justify-center md:justify-start space-x-4">
+                    <div>
+                        <h4 class="text-xl font-bold text-gray-900">Dr. Rosemary Padhi</h4>
+                        <p class="text-sm text-accent font-semibold uppercase tracking-wider">Owner & Founder</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-50 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-end mb-8">
+                <h2 class="text-3xl font-bold text-gray-900">What Our <span class="text-accent">Customers Say</span>
+                </h2>
+                <a href="#"
+                    class="text-accent text-sm font-medium border border-blue-200 px-4 py-1.5 rounded-full hover:bg-blue-50 transition hidden sm:block">View
+                    All Reviews <i class="fas fa-arrow-right ml-1"></i></a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 relative">
+                    <div class="absolute top-6 right-6 text-blue-100 text-4xl">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <div class="text-yellow-400 text-sm mb-3">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-6 relative z-10">"Amazing experience! Got the best pricing on my
+                        new refrigerator. Highly recommended!"</p>
+                    <div class="flex items-center space-x-3">
+                        <img src="https://placehold.co/100x100?text=RK" alt="User"
+                            class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <h5 class="font-bold text-sm text-gray-900">Ritesh Kumar</h5>
+                            <p class="text-xs text-gray-500">Bhadrak</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 relative">
+                    <div class="absolute top-6 right-6 text-blue-100 text-4xl">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <div class="text-yellow-400 text-sm mb-3">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-6 relative z-10">"Great collection of products and excellent
+                        after-sales support. Very happy with the service."</p>
+                    <div class="flex items-center space-x-3">
+                        <img src="https://placehold.co/100x100?text=SP" alt="User"
+                            class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <h5 class="font-bold text-sm text-gray-900">Smita Patnaik</h5>
+                            <p class="text-xs text-gray-500">Bhadrak</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 relative">
+                    <div class="absolute top-6 right-6 text-blue-100 text-4xl">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <div class="text-yellow-400 text-sm mb-3">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-6 relative z-10">"Trusted store for genuine products. The staff
+                        is very cooperative and knowledgeable."</p>
+                    <div class="flex items-center space-x-3">
+                        <img src="https://placehold.co/100x100?text=DJ" alt="User"
+                            class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <h5 class="font-bold text-sm text-gray-900">Debashis Jena</h5>
+                            <p class="text-xs text-gray-500">Bhadrak</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-6 text-center sm:hidden">
+                <a href="#"
+                    class="text-accent text-sm font-medium border border-blue-200 px-4 py-2 rounded-full inline-block">View
+                    All Reviews <i class="fas fa-arrow-right ml-1"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Find Us <span class="text-accent">Here</span></h2>
+                <p class="text-gray-600">Visit our showroom to explore our wide range of premium electronics.</p>
+            </div>
+            <div
+                class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row border border-gray-100">
+                <div class="md:w-1/3 p-8 bg-primary text-white flex flex-col justify-center">
+                    <h2 class="text-2xl font-bold mb-6">Store Location</h2>
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1.5 text-xl mr-4 text-blue-200"></i>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">H & A Enterprises</h4>
+                                <p class="text-blue-100 text-sm">Near New Bus Stand, Bhadrak,<br>Odisha - 756100</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-xl mr-4 text-blue-200"></i>
+                            <div>
+                                <p class="text-blue-100 text-sm">Mon - Sun: 10:00 AM - 9:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone-alt text-xl mr-4 text-blue-200"></i>
+                            <div>
+                                <p class="text-blue-100 text-sm">+91 78478 95210</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="tel:+917847895210"
+                        class="bg-white text-primary text-center px-6 py-3 rounded-lg font-bold shadow hover:bg-gray-50 transition">
+                        <i class="fas fa-phone-alt mr-2"></i> Call Us Now
+                    </a>
+                </div>
+                <div class="md:w-2/3 h-64 md:h-auto min-h-[300px]">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d312.7824450641828!2d86.50873109829966!3d21.075168742168618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1c0b006aa5a269%3A0x1375eef6475406b5!2sTata%20Croma%20products%20electronics!5e1!3m2!1sen!2sin!4v1778906623832!5m2!1sen!2sin"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 mt-6">
+        <div
+            class="bg-primary rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between text-white shadow-xl relative overflow-hidden">
+            <div
+                class="absolute -right-20 -top-20 w-64 h-64 bg-blue-600 rounded-full blur-3xl opacity-50 pointer-events-none">
+            </div>
+
+            <div class="md:w-3/5 relative z-10 mb-8 md:mb-0 text-center md:text-left">
+                <h2 class="text-2xl md:text-3xl font-bold mb-3">Ready to Upgrade Your Home <br>with Premium Electronics?
+                </h2>
+                <p class="text-blue-100 text-sm max-w-md mx-auto md:mx-0">Visit our store in Bhadrak today and
+                    experience the best in technology, quality & service.</p>
+            </div>
+
+            <div class="md:w-2/5 flex flex-col sm:flex-row gap-4 relative z-10 w-full justify-center md:justify-end">
+                <a href="tel:+917847895210"
+                    class="bg-white text-gray-900 flex items-center justify-center px-6 py-3 rounded-xl font-semibold hover:bg-gray-100 transition shadow-lg w-full sm:w-auto">
+                    <i class="fas fa-phone-alt text-accent mr-3"></i>
+                    <div class="text-left leading-tight">
+                        <span class="block text-[10px] text-gray-500 uppercase tracking-wide">Call Us Now</span>
+                        <span class="block text-sm">+91 7008046492</span>
+                    </div>
+                </a>
+                <a href="#"
+                    class="bg-accent border border-blue-400 text-white flex items-center justify-center px-6 py-3 rounded-xl font-semibold hover:bg-blue-600 transition shadow-lg w-full sm:w-auto">
+                    <i class="fas fa-map-marker-alt mr-3"></i>
+                    <div class="text-left leading-tight">
+                        <span class="block text-[10px] text-blue-200 uppercase tracking-wide">Get Directions</span>
+                        <span class="block text-sm">Visit Our Store</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-white border-t border-gray-200 pt-12 pb-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 text-sm">
+
+                <div class="md:col-span-1">
+                    <h2 class="text-xl font-extrabold text-gray-900 tracking-tight leading-none mb-4">H & A ENTERPRISES
+                    </h2>
+                    <p class="text-gray-500 mb-4 leading-relaxed">
+                        Bhadrak's trusted electronics destination. Authorized dealer for Croma, Tata & leading global
+                        brands.
+                    </p>
+                </div>
+
+                <div class="md:col-span-1">
+                    <h4 class="font-bold text-accent mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><a href="#" class="hover:text-accent">Home</a></li>
+                        <li><a href="#" class="hover:text-accent">Products</a></li>
+                        <li><a href="#" class="hover:text-accent">Brands</a></li>
+                        <li><a href="#" class="hover:text-accent">Offers</a></li>
+                        <li><a href="#" class="hover:text-accent">About Us</a></li>
+                        <li><a href="#" class="hover:text-accent">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-1">
+                    <h4 class="font-bold text-accent mb-4">Store Location</h4>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        H & A Enterprises, Near New Bus Stand, Bhadrak, Odisha - 756100
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-accent text-lg"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-accent text-lg"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-accent text-lg"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="md:col-span-1 rounded-lg overflow-hidden border border-gray-200 h-32">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d312.7824450641828!2d86.50873109829966!3d21.075168742168618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1c0b006aa5a269%3A0x1375eef6475406b5!2sTata%20Croma%20products%20electronics!5e1!3m2!1sen!2sin!4v1778906623832!5m2!1sen!2sin"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-gray-100 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p>&copy; 2026 H & A Enterprises. All Rights Reserved.</p>
+                <p class="mt-2 md:mt-0">Designed with <span class="text-red-500">❤️</span> for Bhadrak</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919937315202" target="_blank" rel="noopener noreferrer"
+        class="fixed bottom-6 right-6 bg-green-500 text-white rounded-full w-14 h-14 flex items-center justify-center text-3xl shadow-2xl hover:scale-110 hover:bg-green-600 transition duration-300 z-50">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Contact/Shop Form Modal -->
+    <div id="form-modal"
+        class="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4 transition-opacity duration-300 hidden">
+        <div class="bg-white rounded-xl overflow-hidden shadow-2xl max-w-md w-full relative transform transition-all duration-300 scale-95 opacity-0"
+            id="form-modal-content">
+            <button id="close-form-btn"
+                class="absolute top-4 right-4 bg-gray-100 text-gray-600 rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-200 transition z-10 focus:outline-none">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <div class="p-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Get in Touch</h3>
+                <p class="text-sm text-gray-600 mb-6">Leave your details and our team will get back to you with the best
+                    deals.</p>
+
+                <form id="contact-form" class="space-y-4">
+                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                        <input type="text" required name="name"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary outline-none transition"
+                            placeholder="your name">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                        <input type="tel" required name="phone"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary outline-none transition"
+                            placeholder="+91 98765 43210">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Product/Service Interested
+                            In</label>
+                        <select name="product"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary outline-none transition bg-white">
+                            <option>Air Conditioners</option>
+                            <option>Refrigerators</option>
+                            <option>Smart TVs</option>
+                            <option>Washing Machines</option>
+                            <option>Other Appliances</option>
+                        </select>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-primary text-white font-bold px-4 py-3 rounded-md hover:bg-blue-800 transition shadow-md mt-4">Submit
+                        Request</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup Banner Modal -->
+    <div id="popup-banner"
+        class="fixed inset-0 bg-black/80 flex items-center justify-center z-[100] p-4 transition-opacity duration-500 hidden">
+        <div class="relative max-w-lg w-full transform transition-all duration-500 scale-95 opacity-0"
+            id="popup-banner-content">
+            <button id="close-banner-btn"
+                class="absolute -top-4 -right-4 md:-top-5 md:-right-5 bg-white text-gray-800 rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center shadow-lg hover:bg-gray-200 transition z-10 focus:outline-none">
+                <i class="fas fa-times"></i>
+            </button>
+            <div
+                class="rounded-xl overflow-hidden shadow-2xl bg-white w-full aspect-square md:aspect-[4/3] flex items-center justify-center">
+                <img src="" alt="Promotional Banner" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Form Modal Logic
+        const formModal = document.getElementById('form-modal');
+        const formModalContent = document.getElementById('form-modal-content');
+        const closeFormBtn = document.getElementById('close-form-btn');
+        const openFormBtns = document.querySelectorAll('.open-form-modal-btn');
+
+        const openFormModal = (e) => {
+            e.preventDefault();
+            formModal.classList.remove('hidden');
+            setTimeout(() => {
+                formModalContent.classList.remove('scale-95', 'opacity-0');
+                formModalContent.classList.add('scale-100', 'opacity-100');
+            }, 50);
+        };
+
+        const closeFormModal = () => {
+            formModalContent.classList.remove('scale-100', 'opacity-100');
+            formModalContent.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                formModal.classList.add('hidden');
+            }, 300);
+        };
+
+        openFormBtns.forEach(btn => btn.addEventListener('click', openFormModal));
+        if (closeFormBtn) closeFormBtn.addEventListener('click', closeFormModal);
+
+        if (formModal) {
+            formModal.addEventListener('click', (e) => {
+                if (e.target === formModal) {
+                    closeFormModal();
+                }
+            });
+        }
+
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const formData = new FormData(this);
+                fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            alert('Thank you! Your request has been submitted successfully.');
+                            closeFormModal();
+                            contactForm.reset();
+                        } else {
+                            alert('Oops! Something went wrong. Please try again.');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('There was a problem submitting your form.');
+                    });
+            });
+        }
+
+        // Mobile Menu Toggle Logic
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileBtn) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Popup Banner Logic
+        const popupBanner = document.getElementById('popup-banner');
+        const popupBannerContent = document.getElementById('popup-banner-content');
+        const closeBannerBtn = document.getElementById('close-banner-btn');
+
+        const openPopupBanner = () => {
+            popupBanner.classList.remove('hidden');
+            setTimeout(() => {
+                popupBannerContent.classList.remove('scale-95', 'opacity-0');
+                popupBannerContent.classList.add('scale-100', 'opacity-100');
+            }, 50);
+        };
+
+        const closePopupBanner = () => {
+            popupBannerContent.classList.remove('scale-100', 'opacity-100');
+            popupBannerContent.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                popupBanner.classList.add('hidden');
+            }, 500);
+        };
+
+        if (closeBannerBtn) closeBannerBtn.addEventListener('click', closePopupBanner);
+
+        if (popupBanner) {
+            popupBanner.addEventListener('click', (e) => {
+                if (e.target === popupBanner) {
+                    closePopupBanner();
+                }
+            });
+        }
+
+        // Trigger banner on click
+        const openBannerBtns = document.querySelectorAll('.open-banner-btn');
+        openBannerBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                openPopupBanner();
+            });
+        });
+
+        // View All Categories Toggle
+        const extraCategoryCards = document.querySelectorAll('#extra-categories > div');
+        const viewAllBtns = [
+            document.getElementById('view-all-categories-btn'),
+            document.getElementById('view-all-categories-btn-mobile')
+        ];
+        let categoriesExpanded = false;
+
+        viewAllBtns.forEach(btn => {
+            if (!btn) return;
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                categoriesExpanded = !categoriesExpanded;
+                extraCategoryCards.forEach(card => {
+                    card.classList.toggle('hidden', !categoriesExpanded);
+                });
+                viewAllBtns.forEach(b => {
+                    if (!b) return;
+                    if (categoriesExpanded) {
+                        b.innerHTML = 'Show Less <i class="fas fa-arrow-up ml-1"></i>';
+                    } else {
+                        b.innerHTML = 'View All Categories <i class="fas fa-arrow-right ml-1"></i>';
+                    }
+                });
+            });
+        });
+
+        // Trigger banner automatically when webpage is opened
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                openPopupBanner();
+            }, 1000); // 1 second delay for a smooth entrance
+        });
+    </script>
+</body>
+
+</html>
