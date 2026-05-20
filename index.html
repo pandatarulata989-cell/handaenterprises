@@ -761,7 +761,7 @@
                             <i class="fas fa-map-marker-alt mt-1.5 text-xl mr-4 text-blue-200"></i>
                             <div>
                                 <h4 class="font-bold text-lg mb-1">H & A Enterprises</h4>
-                                <p class="text-blue-100 text-sm">Near New Bus Stand, Bhadrak,<br>Odisha - 756100</p>
+                                <p class="text-blue-100 text-sm">Chhapulia Bypass, Bankashi, Bhadrak,<br>Odisha - 756100</p>
                             </div>
                         </div>
                         <div class="flex items-center">
@@ -773,11 +773,11 @@
                         <div class="flex items-center">
                             <i class="fas fa-phone-alt text-xl mr-4 text-blue-200"></i>
                             <div>
-                                <p class="text-blue-100 text-sm">+91 78478 95210</p>
+                                <p class="text-blue-100 text-sm">+91 9937315202</p>
                             </div>
                         </div>
                     </div>
-                    <a href="tel:+917847895210"
+                    <a href="tel:+919937315202"
                         class="bg-white text-primary text-center px-6 py-3 rounded-lg font-bold shadow hover:bg-gray-50 transition">
                         <i class="fas fa-phone-alt mr-2"></i> Call Us Now
                     </a>
@@ -813,7 +813,7 @@
                     <i class="fas fa-phone-alt text-accent mr-3"></i>
                     <div class="text-left leading-tight">
                         <span class="block text-[10px] text-gray-500 uppercase tracking-wide">Call Us Now</span>
-                        <span class="block text-sm">+91 7008046492</span>
+                        <span class="block text-sm">+91 9937315202</span>
                     </div>
                 </a>
                 <a href="#"
@@ -856,7 +856,7 @@
                 <div class="md:col-span-1">
                     <h4 class="font-bold text-accent mb-4">Store Location</h4>
                     <p class="text-gray-600 mb-4 leading-relaxed">
-                        H & A Enterprises, Near New Bus Stand, Bhadrak, Odisha - 756100
+                        H & A Enterprises, Chhapulia Bypass, Bankashi, Bhadrak, Odisha - 756100
                     </p>
                     <div class="flex space-x-4">
                         <a href="#" class="text-gray-400 hover:text-accent text-lg"><i class="fab fa-facebook"></i></a>
@@ -876,7 +876,7 @@
             <div
                 class="border-t border-gray-100 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
                 <p>&copy; 2026 H & A Enterprises. All Rights Reserved.</p>
-                <p class="mt-2 md:mt-0">Designed with <span class="text-red-500">❤️</span> for Bhadrak</p>
+                <p class="mt-2 md:mt-0">Designed with <span class="text-red-500">❤️</span> for Excellence</p>
             </div>
         </div>
     </footer>
@@ -902,24 +902,31 @@
                 <p class="text-sm text-gray-600 mb-6">Leave your details and our team will get back to you with the best
                     deals.</p>
 
+                <div data-fs-success style="display: none;" class="bg-green-50 text-green-700 p-3 rounded-md text-sm mb-4">
+                    Thank you! Your request has been submitted successfully.
+                </div>
+                <div data-fs-error style="display: none;" class="bg-red-50 text-red-700 p-3 rounded-md text-sm mb-4">
+                    Oops! Something went wrong. Please check your inputs and try again.
+                </div>
                 <form id="contact-form" class="space-y-4">
-                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                        <input type="text" required name="name"
+                        <input type="text" required name="name" data-fs-field
                             class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary outline-none transition"
                             placeholder="your name">
+                        <span data-fs-error="name" class="text-red-500 text-xs mt-1 block"></span>
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-                        <input type="tel" required name="phone"
+                        <input type="tel" required name="phone" data-fs-field
                             class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary outline-none transition"
                             placeholder="+91 98765 43210">
+                        <span data-fs-error="phone" class="text-red-500 text-xs mt-1 block"></span>
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Product/Service Interested
                             In</label>
-                        <select name="product"
+                        <select name="product" data-fs-field
                             class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary outline-none transition bg-white">
                             <option>Air Conditioners</option>
                             <option>Refrigerators</option>
@@ -927,9 +934,10 @@
                             <option>Washing Machines</option>
                             <option>Other Appliances</option>
                         </select>
+                        <span data-fs-error="product" class="text-red-500 text-xs mt-1 block"></span>
                     </div>
-                    <button type="submit"
-                        class="w-full bg-primary text-white font-bold px-4 py-3 rounded-md hover:bg-blue-800 transition shadow-md mt-4">Submit
+                    <button type="submit" data-fs-submit-btn
+                        class="w-full bg-primary text-white font-bold px-4 py-3 rounded-md hover:bg-blue-800 transition shadow-md mt-4 disabled:opacity-50 disabled:cursor-not-allowed">Submit
                         Request</button>
                 </form>
             </div>
@@ -947,7 +955,7 @@
             </button>
             <div
                 class="rounded-xl overflow-hidden shadow-2xl bg-white w-full aspect-square md:aspect-[4/3] flex items-center justify-center">
-                <img src="" alt="Promotional Banner" class="w-full h-full object-cover">
+                <img src="./banner.webp" alt="Promotional Banner" class="w-full h-full object-cover">
             </div>
         </div>
     </div>
@@ -987,31 +995,9 @@
             });
         }
 
-        const contactForm = document.getElementById('contact-form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function (e) {
-                e.preventDefault();
-                const formData = new FormData(this);
-                fetch('https://api.web3forms.com/submit', {
-                    method: 'POST',
-                    body: formData
-                })
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.success) {
-                            alert('Thank you! Your request has been submitted successfully.');
-                            closeFormModal();
-                            contactForm.reset();
-                        } else {
-                            alert('Oops! Something went wrong. Please try again.');
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                        alert('There was a problem submitting your form.');
-                    });
-            });
-        }
+        // Initialize Formspree AJAX Form
+        window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+        formspree('initForm', { formElement: '#contact-form', formId: 'xykvzber' });
 
         // Mobile Menu Toggle Logic
         const mobileBtn = document.getElementById('mobile-menu-btn');
@@ -1097,6 +1083,7 @@
             }, 1000); // 1 second delay for a smooth entrance
         });
     </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 
 </html>
